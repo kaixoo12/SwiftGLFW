@@ -1,8 +1,16 @@
 # SwiftGLFW
 
-A Swift library that adds a more Swift-like interface to [GLFW](https://github.com/glfw/glfw). ~~So far, it's only been tested on macOS, but it should compile and run on Windows and Linux with little difficulty~~. As of pull request #5, cross-platform *should* be working now.
+A Swift library that adds a more Swift-like interface to [GLFW](https://github.com/glfw/glfw). As of pull request #5, cross-platform *should* be working now.
 
 This package is based on [CGLFW3](https://github.com/thepotatoking55/CGLFW3), which is just the pure C bindings.
+
+## Beware
+
+Me, kaixoo, am only maintaining this because the original maintainer, thepotatoking55, stopped maintaining the package.
+
+In MacOS, this package could have some issues because originally we were setting a flag that disabled the use of Automatic Reference Counting, but since SwiftPM prohibts the use of `.unsafeFlags` to packages, we cannot set it.
+
+I'm a linux Swift lover!
 
 ## Setting Up
 
@@ -17,7 +25,7 @@ let package = Package(
         .executable(name: "GLFW Sample", targets: ["GLFWSample"])
     ],
     dependencies: [
-        .package(url: "https://github.com/thepotatoking55/SwiftGLFW.git", .upToNextMajor(from: "4.2.0"))
+        .package(url: "https://github.com/kaixoo12/SwiftGLFW.git", .from: "4.3.1")
         ...
     ],
     targets: [

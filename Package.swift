@@ -15,7 +15,7 @@ let package = Package(
         .library(name: "SwiftGLFW", targets: ["GLFW"])
     ],
     dependencies: [
-        .package(url: "https://github.com/thepotatoking55/CGLFW3.git", from: "3.4.0"),
+        .package(url: "https://github.com/thepotatoking55/CGLFW3.git", from: "3.4.1"),
     ],
     targets: [
         .target(
